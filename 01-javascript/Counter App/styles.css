@@ -156,3 +156,16 @@ footer {
   text-align: center;
   padding-bottom: 0.02rem;
 }
+#msg {
+  text-align: center;
+  color: rgb(246, 31, 31);
+  text-shadow: 1px 2px 4px rgb(255, 0, 0);
+  animation: blinker 0.5s linear infinite;
+  visibility: hidden;
+}
+
+@keyframes blinker {
+  25% {
+    opacity: 0;
+  }
+}

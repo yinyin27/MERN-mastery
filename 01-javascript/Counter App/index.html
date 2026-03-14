@@ -12,10 +12,10 @@
         <section id="navbar">
           <div class="nav">
             <div class="logo">
-              <h3><a href="/">yinyin</a></h3>
+              <h3><a href="#">yinyin</a></h3>
             </div>
             <div class="fs_button">
-              <button class="clean-btn">
+              <button id="fullScreenBtn" class="clean-btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -45,12 +45,12 @@
             <p id="CounterText">0</p>
           </div>
           <div class="Btns">
-            <button>increment</button>
-            <button>decrement</button>
-            <button>reset</button>
+            <button id="inc-btn">increment</button>
+            <button id="dec-btn">decrement</button>
+            <button id="reset-btn">reset</button>
           </div>
-          <div class="msgs">
-            <p>This is for Errors and other messages</p>
+          <div class="error">
+            <p id="msg">Count can't be negative! Increment first.</p>
           </div>
         </section>
       </main>
