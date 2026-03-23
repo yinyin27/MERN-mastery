@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QuoteR</title>
+  </head>
+  <body class="bg-linear-to-br from-neutral-800 to-black text-white">
+    <div
+      class="wrapper min-h-screen max-w-3xl mx-auto py-6 px-4 relative flex flex-col justify-between items-center"
+    >
+      <header>
+        <nav>
+          <a
+            class="text-2xl font-bold bg-linear-to-r from-gray-50 to-gray-500 bg-clip-text text-transparent shadow-xs"
+            href="#"
+            >Random Quote Generator</a
+          >
+        </nav>
+      </header>
+
+      <div
+        class="w-full border px-2 rounded-2xl min-w-xs xl:min-w-md h-72 md:h-108 overflow-y-scroll snap-y snap-mandatory no-scrollbar"
+      >
+        <div
+          class="invisible md:visible absolute space-y-4 h-full inset-y-0 right-9 flex flex-col justify-center items-center gap-3"
+        >
+          <button class="hover:animate-pulse active:animate-bounce">
+            <img src="src/assets/arrow_Up.svg" alt="Next" />
+          </button>
+          <button class="hover:animate-pulse active:animate-bounce">
+            <img src="src/assets/arrow_Down.svg" alt="Previous" />
+          </button>
+        </div>
+        <div
+          class="snap-start min-h-full text-center flex flex-col justify-center items-center gap-4"
+        >
+          <h1 class="text-2xl font-JuliusSansOne">
+            Toughest lines ever written
+          </h1>
+          <p class="text-lg text-gray-400">scroll to read</p>
+        </div>
+        <div
+          class="snap-start min-h-full text-center flex flex-col justify-center items-center gap-4"
+        >
+          <h1 class="text-2xl font-JuliusSansOne">
+            Toughest lines ever written
+          </h1>
+          <p class="text-lg text-gray-400">scroll to read</p>
+        </div>
+        <div
+          class="snap-start min-h-full text-center flex flex-col justify-center items-center gap-4"
+        >
+          <h1 class="text-2xl font-JuliusSansOne">
+            Toughest lines ever written
+          </h1>
+          <p class="text-lg text-gray-400">scroll to read</p>
+        </div>
+      </div>
+      <footer class="text-center text-gray-300">
+        <p class="text-xs font-sans">
+          Copyright ©️ yinyin 2026 | All rights reserved.
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
