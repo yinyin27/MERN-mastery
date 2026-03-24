@@ -26,15 +26,18 @@
         <div
           class="invisible md:visible absolute space-y-4 h-full inset-y-0 right-9 flex flex-col justify-center items-center gap-3"
         >
-          <button class="hover:animate-pulse active:animate-bounce">
+          <button id="upBtn" class="hover:animate-pulse active:animate-bounce">
             <img src="src/assets/arrow_Up.svg" alt="Next" />
           </button>
-          <button class="hover:animate-pulse active:animate-bounce">
+          <button
+            id="downBtn"
+            class="hover:animate-pulse active:animate-bounce"
+          >
             <img src="src/assets/arrow_Down.svg" alt="Previous" />
           </button>
         </div>
         <div
-          class="snap-start min-h-full text-center flex flex-col justify-center items-center gap-4"
+          class="snap-start min-h-full p-10 text-center flex flex-col justify-center items-center gap-4"
         >
           <h1 class="text-2xl font-JuliusSansOne">
             Toughest lines ever written
@@ -42,20 +45,9 @@
           <p class="text-lg text-gray-400">scroll to read</p>
         </div>
         <div
-          class="snap-start min-h-full text-center flex flex-col justify-center items-center gap-4"
+          class="snap-start min-h-full p-20 text-center flex flex-col justify-center items-center gap-4"
         >
-          <h1 class="text-2xl font-JuliusSansOne">
-            Toughest lines ever written
-          </h1>
-          <p class="text-lg text-gray-400">scroll to read</p>
-        </div>
-        <div
-          class="snap-start min-h-full text-center flex flex-col justify-center items-center gap-4"
-        >
-          <h1 class="text-2xl font-JuliusSansOne">
-            Toughest lines ever written
-          </h1>
-          <p class="text-lg text-gray-400">scroll to read</p>
+          <p id="quoteText" class="text-shadow-md text-gray-50"></p>
         </div>
       </div>
       <footer class="text-center text-gray-300">
