@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lbg: #fbf9e4;
+  --color-lfg: #122c4f;
+  --color-bbg: #000000;
+  --color-bfg: #5b88b2;
+  --font-ContrailOne: "Contrail One";
+  --font-PatrickHand: "Patrick Hand";
+}
+.dark {
+  --bg: 0 0 0;
+  --fg: 91 136 178;
+}
+
+.form-font {
+  font-family: "Patrick Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.main-font {
+  font-family: "Contrail One", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
