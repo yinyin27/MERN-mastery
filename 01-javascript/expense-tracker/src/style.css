@@ -7,6 +7,18 @@
   --color-bfg: #5b88b2;
   --font-ContrailOne: "Contrail One";
   --font-PatrickHand: "Patrick Hand";
+  --animate-click: click 0.3s ease-out;
+
+  @keyframes click {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.25);
+      opacity: 0;
+    }
+  }
 }
 .dark {
   --bg: 0 0 0;
