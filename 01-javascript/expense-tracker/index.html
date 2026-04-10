@@ -27,8 +27,8 @@
       <h1 class="text-3xl main-font text-blue-900">Expense Tracker</h1>
       <div class="form">
         <form
+          id="add-txn-form"
           class="rounded-xl shadow-sm pl-4 py-4 pr-1 flex flex-col flex-1 gap-y-3 bg-linear-to-tr from-90% from-blue-50 via-blue-100 to to-blue-800 to-5% justify-center items-baseline"
-          method="post"
         >
           <div>
             <h2 class="font-PatrickHand text-xl font-semibold tracking-wider">
@@ -36,34 +36,34 @@
             </h2>
           </div>
           <div class="name">
-            <label for="name" class="form-font text-md tracking-wider">
+            <label for="txn-name" class="form-font text-md tracking-wider">
               Name:
             </label>
             <input
               type="text"
               name="name"
-              id="name"
+              id="txn-name"
               placeholder="Enter expense name"
               class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b"
             />
           </div>
           <div class="Amount">
-            <label for="amount" class="form-font text-md tracking-wider"
+            <label for="txn-amt" class="form-font text-md tracking-wider"
               >Amount:</label
             >
             <input
               type="number"
               step="0.01"
               name="name"
-              id="amount"
+              id="txn-amt"
               placeholder="Enter amount"
               class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b"
             />
           </div>
           <div class="tr-type flex w-full gap-3 justify-baseline items-center">
-            <label for="type" class="form-font text-md tracking-wider"
-              >Type:
-            </label>
+            <p class="form-font text-md tracking-wider hover:cursor-default">
+              Type:
+            </p>
             <div class="space-x-1">
               <input type="radio" name="expenseType" id="credit" />
               <label for="credit" class="font-mono text-md tracking-wider"
@@ -89,17 +89,21 @@
               class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b"
             />
           </div>
-          <div class="flex w-[90%] justify-center items-center">
+          <div class="pt-3 flex w-[90%] justify-center items-center">
             <input
               type="submit"
               name="Submit"
+              id="add-txn-btn"
               value="Add"
               class="rounded-full shadow-xs shadow-blue-950 text-xl text-center px-5 py-1 text-white bg-blue-800 font-PatrickHand tracking-wide active:bg-blue-300 active:text-blue-950 active:font-bold active:animate-ping hover:bg-blue-950 hover:scale-105 transition-all"
             />
           </div>
         </form>
       </div>
-      <div class="showBalance p-3 flex gap-4 justify-between items-center">
+      <div
+        id="showBalance"
+        class="p-3 pt-1 flex gap-4 justify-between items-center"
+      >
         <!-- <p
           class="font-mono text-xl text-blue-950 text-shadow-xs text-shadow-blue-950"
         >
@@ -107,10 +111,24 @@
         </p> -->
         <button
           id="balBtn"
-          class="text-md text-center font-medium shadow-sm shadow-gray-500 border border-blue-600 bg-linear-to-br from-20% from-white via-50% via-gray-100 to-gray-200 to-100% text-black rounded-full px-3 py-1 hover:-translate-y-px hover:border-blue-100 active:animate-click transition-all"
+          class="text-md text-center font-bold lg:font-semibold shadow-sm shadow-gray-500 border border-blue-600 bg-linear-to-br from-20% from-white via-50% via-gray-100 to-gray-200 to-100% text-black rounded-full px-3 py-1 lg:hover:-translate-y-px lg:hover:border-blue-100 active:animate-click active:border-blue-100 transition-all"
         >
           Check balance
         </button>
+      </div>
+      <div class="w-[96%] flex flex-col justify-center items-center gap-2">
+        <h4
+          class="font-PatrickHand text-bl ue-700 italic font-bold tracking-wider pt-4 pb-1 text-shadow-lg text-shadow-gray-300 text-xl"
+        >
+          Recent expenses
+        </h4>
+        <ul id="txn-list" class="w-full space-y-2.5"></ul>
+        <!-- <div 
+        class="w-full text-md font-bold lg:font-semibold font-mono tracking-wider py-2 border border-gray-100 rounded-2xl px-5 flex flex-1 justify-between items-center bg-linear-to-br from-20% from-white via-50% via-gray-100 to-gray-200 to-100% hover:cursor-default hover:-translate-y-0.5 hover:shadow-sm active:animate-click transition-transform"
+    >
+        <p class="txn-title">${txnName.value}</p>
+        <p class="amt">₹${txnAmt.value}</p>
+    </div> -->
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
