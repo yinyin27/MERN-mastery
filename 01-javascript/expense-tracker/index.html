@@ -19,106 +19,133 @@
     <title>Expense Tracker</title>
   </head>
   <body
-    class="min-h-screen bg-gray-50 flex flex-col justify-center items-center"
+    class="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-6"
   >
     <div
-      class="hero px-2 rounded-2xl py-6 bg-blue-100 w-full max-w-xs flex flex-col justify-center items-center shadow-xl gap-5"
+      class="hero px-2 rounded-2xl py-6 bg-blue-100 w-full max-w-xs flex flex-col justify-center items-center shadow-xl gap-5 md:max-w-sm lg:max-w-md xl:max-w-3xl xl:px-4"
     >
-      <h1 class="text-3xl main-font text-blue-900">Expense Tracker</h1>
-      <div class="form">
+      <h1 class="text-4xl main-font text-blue-900">Expense Tracker</h1>
+      <div class="px-4 w-full flex justify-center items-center">
         <form
           id="add-txn-form"
-          class="rounded-xl shadow-sm pl-4 py-4 pr-1 flex flex-col flex-1 gap-y-3 bg-linear-to-tr from-90% from-blue-50 via-blue-100 to to-blue-800 to-5% justify-center items-baseline"
+          class="w-full rounded-xl shadow-sm px-4 py-4 flex flex-col flex-1 justify-center items-center gap-y-3 bg-linear-to-tr from-90% from-blue-50 via-blue-100 to to-blue-800 to-5%"
         >
-          <div>
-            <h2 class="font-PatrickHand text-xl font-semibold tracking-wider">
+          <div class="w-full">
+            <h2 class="font-PatrickHand text-2xl font-semibold tracking-wider">
               Add a transaction
             </h2>
           </div>
-          <div class="name">
-            <label for="txn-name" class="form-font text-md tracking-wider">
-              Name:
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="txn-name"
-              placeholder="Enter expense name"
-              class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b"
-            />
-          </div>
-          <div class="Amount">
-            <label for="txn-amt" class="form-font text-md tracking-wider"
-              >Amount:</label
+          <div
+            id="add-txn-drop-down"
+            class="w-full flex flex-col flex-1 justify-center items-baseline gap-y-3 xl:grid-cols-2 xl:grid xl:gap-y-6 xl:pt-2 xl:max-w-2xl"
+          >
+            <div class="name xl:flex xl:flex-col xl:gap-x-1">
+              <label
+                for="txn-name"
+                class="form-font text-md tracking-wider md:text-lg lg:text-xl"
+              >
+                Name:
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="txn-name"
+                required
+                placeholder="Enter expense name"
+                class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b xl:w-[88%] md:text-lg lg:text-xl"
+              />
+            </div>
+            <div class="Amount xl:flex xl:flex-col xl:gap-x-1">
+              <label
+                for="txn-amt"
+                class="form-font text-md tracking-wider md:text-lg lg:text-xl"
+                >Amount:</label
+              >
+              <input
+                type="number"
+                step="0.01"
+                name="name"
+                required
+                id="txn-amt"
+                placeholder="Enter amount"
+                class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b xl:w-[88%] md:text-lg lg:text-xl"
+              />
+            </div>
+            <div
+              class="tr-type flex w-full gap-3 justify-baseline items-center xl:w-[88%]"
             >
-            <input
-              type="number"
-              step="0.01"
-              name="name"
-              id="txn-amt"
-              placeholder="Enter amount"
-              class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b"
-            />
-          </div>
-          <div class="tr-type flex w-full gap-3 justify-baseline items-center">
-            <p class="form-font text-md tracking-wider hover:cursor-default">
-              Type:
-            </p>
-            <div class="space-x-1">
-              <input type="radio" name="expenseType" id="credit" />
-              <label for="credit" class="font-mono text-md tracking-wider"
-                >Credit
-              </label>
+              <p
+                class="form-font text-md tracking-wider hover:cursor-default md:text-lg lg:text-xl"
+              >
+                Type:
+              </p>
+              <div
+                class="space-x-1 xl:flex xl:flex-col xl:justify-center xl:items-center xl:gap-y-1"
+              >
+                <input
+                  type="radio"
+                  value="credit"
+                  required
+                  name="expenseType"
+                  id="credit"
+                />
+                <label
+                  for="credit"
+                  class="font-mono text-md tracking-wider md:text-lg lg:text-xl"
+                  >Credit
+                </label>
+              </div>
+              <div
+                class="space-x-1 xl:flex xl:flex-col xl:justify-center xl:items-center xl:gap-y-1"
+              >
+                <input
+                  type="radio"
+                  value="debit"
+                  name="expenseType"
+                  id="debit"
+                />
+                <label
+                  for="debit"
+                  class="font-mono text-md tracking-wider md:text-lg lg:text-xl"
+                  >Debit
+                </label>
+              </div>
             </div>
-            <div class="space-x-1">
-              <input type="radio" name="expenseType" id="debit" />
-              <label for="debit" class="font-mono text-md tracking-wider"
-                >Debit
+            <div>
+              <label
+                for="timestamp"
+                class="form-font text-md tracking-wider md:text-lg lg:text-xl"
+                >Date:
               </label>
+              <input
+                type="date"
+                name="date"
+                id="timestamp"
+                placeholder="Enter Date & time"
+                class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b"
+              />
             </div>
-          </div>
-          <div>
-            <label for="timestamp" class="form-font text-md tracking-wider"
-              >Date:
-            </label>
-            <input
-              type="date"
-              name="date"
-              id="timestamp"
-              placeholder="Enter Date & time"
-              class="font-mono text-md px-1 space-x-1 focus:outline-0 border-b"
-            />
-          </div>
-          <div class="pt-3 flex w-[90%] justify-center items-center">
-            <input
-              type="submit"
-              name="Submit"
-              id="add-txn-btn"
-              value="Add"
-              class="rounded-full shadow-xs shadow-blue-950 text-xl text-center px-5 py-1 text-white bg-blue-800 font-PatrickHand tracking-wide active:bg-blue-300 active:text-blue-950 active:font-bold active:animate-ping hover:bg-blue-950 hover:scale-105 transition-all"
-            />
+            <div
+              class="pt-3 flex w-[90%] justify-end items-center xl:col-span-2"
+            >
+              <input
+                type="submit"
+                name="Submit"
+                id="add-txn-btn"
+                value="Add"
+                class="rounded-2xl shadow-xs shadow-blue-950 text-xl text-center px-8 py-2 text-white bg-blue-800 font-PatrickHand tracking-wide active:bg-blue-300 active:text-blue-950 active:font-bold active:animate-ping hover:bg-blue-950 hover:scale-105 transition-all md:text-2xl"
+              />
+            </div>
           </div>
         </form>
       </div>
+
       <div
-        id="showBalance"
-        class="p-3 pt-1 flex gap-4 justify-between items-center"
+        id="txn-list-container"
+        class="w-[96%] flex flex-col justify-center items-center gap-2"
       >
-        <!-- <p
-          class="font-mono text-xl text-blue-950 text-shadow-xs text-shadow-blue-950"
-        >
-          10,000
-        </p> -->
-        <button
-          id="balBtn"
-          class="text-md text-center font-bold lg:font-semibold shadow-sm shadow-gray-500 border border-blue-600 bg-linear-to-br from-20% from-white via-50% via-gray-100 to-gray-200 to-100% text-black rounded-full px-3 py-1 lg:hover:-translate-y-px lg:hover:border-blue-100 active:animate-click active:border-blue-100 transition-all"
-        >
-          Check balance
-        </button>
-      </div>
-      <div class="w-[96%] flex flex-col justify-center items-center gap-2">
         <h4
-          class="font-PatrickHand text-bl ue-700 italic font-bold tracking-wider pt-4 pb-1 text-shadow-lg text-shadow-gray-300 text-xl"
+          class="font-PatrickHand text-bl ue-700 font-bold tracking-wider pt-4 pb-1 text-shadow-lg text-shadow-gray-300 text-xl md:text-2xl"
         >
           Recent expenses
         </h4>
